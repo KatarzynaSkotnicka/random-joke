@@ -1,13 +1,12 @@
-var url = 'http://api.icndb.com/jokes/random';
-    paragraph = document.getElementById('joke');
+var url = 'http://api.icndb.com/jokes/random',
+  paragraph = document.getElementById('joke'),
 
+  button = document.getElementById('get-joke');
+  button.addEventListener('click', function(){
     getJoke();
-    
-    button = document.getElementById('get-joke');
-    button.addEventListener('click', function(){
-      getJoke();
-    });
+  });
 
+getJoke();
 
 function getJoke() {
   var xhr = new XMLHttpRequest();
